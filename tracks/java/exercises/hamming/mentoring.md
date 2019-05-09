@@ -6,7 +6,9 @@ class Hamming {
 
     Hamming(String leftStrand, String rightStrand) {
         if (leftStrand.length() != rightStrand.length())
-            throw new IllegalArgumentException("leftStrand and rightStrand must be of equal length.");
+            throw new IllegalArgumentException(leftStrand.length() == 0 ? "left strand must not be empty."
+                    : (rightStrand.length() == 0 ? "right strand must not be empty."
+                    : "leftStrand and rightStrand must be of equal length."));
         this.leftStrand = leftStrand;
         this.rightStrand = rightStrand;
     }
@@ -29,7 +31,9 @@ class Hamming {
 
     Hamming(String leftStrand, String rightStrand) {
         if (leftStrand.length() != rightStrand.length())
-            throw new IllegalArgumentException("leftStrand and rightStrand must be of equal length.");
+            throw new IllegalArgumentException(leftStrand.length() == 0 ? "left strand must not be empty."
+                    : (rightStrand.length() == 0 ? "right strand must not be empty."
+                    : "leftStrand and rightStrand must be of equal length."));
         this.leftStrand = leftStrand.toCharArray();
         this.rightStrand = rightStrand.toCharArray();
     }
